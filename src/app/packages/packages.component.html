@@ -1,1 +1,111 @@
-<p>packages works!</p>
+<div class="container-fluid mx-n3">
+    <div class="row my-n3 mx-md-n4">
+        <div class="col-12 col-xl-8">
+
+            <!-- Goals -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+
+                            <!-- Title -->
+                            <h1 class="card-header-title">
+                                Shipments
+                            </h1>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+                <div class="table-responsive mb-0"
+                    data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+                    <ngx-datatable class="material" [rows]="data" [columnMode]="'force'" [headerHeight]="50"
+                        [footerHeight]="50" [rowHeight]="70" [limit]="10" [selected]="selected"
+                        [selectionType]="'single'">
+                        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns, let i = index">
+                            <ngx-datatable-column [width]="100">
+                                <ng-template ngx-datatable-header-template>
+                                    <span>{{this.columnNames.get(column)}}</span>
+                                </ng-template>
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span innerHTML="{{row[column].value}}"></span>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ng-container>
+                    </ngx-datatable>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-xl-4 mx-md-n2 h-100">
+
+            <!-- Projects -->
+            <div class="card card-fill">
+                <div class="card-header">
+
+                    <!-- Title -->
+                    <h1 class="card-header-title">
+                        Your US Address
+                    </h1>
+                </div>
+                <div class="card-body">
+
+                    <!-- List group -->
+                    <div class="list-group list-group-flush my-n3">
+                        <div class="list-group-item border-bottom-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+
+                                    <!-- Avatar -->
+                                    <h3 class="text-center">
+                                        <span class=" border-bottom border-dark" style="color: #000080;">This is your
+                                            FREE US
+                                            ADDRESS</span>
+                                    </h3>
+                                </div>
+                            </div> <!-- / .row -->
+                        </div>
+                        <div class="list-group-item border-bottom-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+
+                                    <!-- Avatar -->
+                                    <h3 class="text-center">
+                                        <strong>Your UNIT # helps us to identify the parcel belong to you; include it
+                                            whenever you use
+                                            your U.S. address</strong>
+                                    </h3>
+                                </div>
+                            </div> <!-- / .row -->
+                        </div>
+                        <div class="list-group-item border-bottom-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <p class="">
+                                        Full Name: sarat tunu
+                                    </p>
+                                    <p class="">
+                                        Addr Line 1: 1823 Maryland Ave
+                                    </p>
+                                    <p class="">
+                                        Address Line 2: Unit # 41029
+                                    </p>
+                                    <p class="">
+                                        City: Niagara Falls
+                                    </p>
+                                    <p class="">
+                                        State: NY
+                                    </p>
+                                    <p class="">
+                                        Zip Code: 14305
+                                    </p>
+
+                                </div>
+                            </div> <!-- / .row -->
+                        </div>
+                    </div>
+
+                </div> <!-- / .card-body -->
+            </div> <!-- / .card -->
+        </div>
+    </div> <!-- / .row -->
+</div>

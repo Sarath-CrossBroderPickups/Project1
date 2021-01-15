@@ -12,6 +12,7 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DemoMaterialModule} from './material-module';
 import {MatNativeDateModule} from '@angular/material/core';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    NgxDatatableModule
   ],
   providers: [QuickBase,
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' }}],

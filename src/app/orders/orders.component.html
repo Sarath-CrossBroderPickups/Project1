@@ -7,20 +7,3 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table> --> 
-<table class="table table-sm table-nowrap">
-    <thead>
-      <tr>
-        <th *ngFor="let column of displayedColumns" >
-          <a href="#" class="text-muted list-sort" data-sort="goal-project">
-            {{this.columnNames.get(column)}}
-          </a>
-        </th>
-      </tr>
-    </thead>
-    <tbody class="list">
-      <tr *ngFor="let dt of data">
-        <td class="goal-project" *ngFor="let column of displayedColumns" >
-            <div [innerHtml]="dt[column].value"></div>
-        </td>
-      </tr>
-  </table>
